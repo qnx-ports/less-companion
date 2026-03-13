@@ -3,7 +3,7 @@
 # Alpine-Maintainer: Celeste <cielesti@protonmail.com>
 pkgname=less
 pkgver=691
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="File pager"
 url="https://www.greenwoodsoftware.com/less/"
 vcs_url="https://github.com/gwsw/less"
@@ -32,6 +32,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 6ae54f0c2b86709cc1aea54b0531b06ef155f852b6a23c0c36505e3bca93c0c6806ef89fbbd90eee7afeb0ad8e4d9ef09c5b25e133a018e6bbef1c97ad4c7728  less-691.tar.gz
 "
